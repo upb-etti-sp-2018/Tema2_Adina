@@ -11,7 +11,7 @@ x_mod(t_mod<=D) = x_tr;       %modificam valorile nule cu valori din semnalul or
 
                           %unde avem valori din t <= durata semnalului 
 subplot(2,1,1)
-plot(t,x_mod),title('x(t)(linie solida) si semnalul reconstruit(linie punctata)');  %afisam x(t)
+plot(t_mod,x_mod),title('x(t)(linie solida) si semnalul reconstruit(linie punctata)');  %afisam x(t)
 hold on;
 for k = -N:N %k este variabila dupa care se realizeaza suma
 

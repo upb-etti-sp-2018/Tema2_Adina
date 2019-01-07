@@ -1,6 +1,6 @@
 %Numar de ordine: 16
-P = 40; %Perioada
-D = 16; 
+P = 40; %Perioada semnalului
+D = 16;      %durata semnalelor
 N = 50;       %numarul de coeficienti
 w0 = 2*pi/P; 
 t_tr = 0:0.02:D;         %se esantioneaza semnalul original

@@ -7,7 +7,7 @@ t_tr = 0:0.02:D;         %se esantioneaza semnalul original
 x_tr = sawtooth((pi/12)*t_tr,0.5)/2+0.5;        %semnalul triunghiular
 t_mod = 0:0.02:P;         %se esantioneaza semnalul modificat
 x_mod = zeros(1,length(t_mod));      %initializam semnalul modificat cu valori nule
-x_mod(t<=D) = x_tr;       %modificam valorile nule cu valori din semnalul original
+x_mod(t_mod<=D) = x_tr;       %modificam valorile nule cu valori din semnalul original
 
                           %unde avem valori din t <= durata semnalului 
 subplot(2,1,1)

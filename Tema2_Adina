@@ -1,10 +1,10 @@
-%Numar de ordine: 16
+%Numar de ordine: 9
 P = 40; %Perioada semnalului
-D = 16;      %durata semnalelor
+D = 9;      %durata semnalelor
 N = 50;       %numarul de coeficienti
 w0 = 2*pi/P; 
 t_tr = 0:0.02:D;         %se esantioneaza semnalul original
-x_tr = sawtooth((pi/12)*t_tr,0.5)/2+0.5;        %semnalul triunghiular
+x_tr = square((pi/12)*t_tr,0.5)/2+0.5;        %semnalul dreptunghiular
 t_mod = 0:0.02:P;         %se esantioneaza semnalul modificat
 x_mod = zeros(1,length(t_mod));      %initializam semnalul modificat cu valori nule
 x_mod(t_mod<=D) = x_tr;       %modificam valorile nule cu valori din semnalul original
@@ -46,8 +46,9 @@ w=-50*w0:w0:50*w0; %w este vectorul ce ne va permite afisarea spectrului functie
 stem(w/(2*pi),abs(X)),title('Spectrul lui x(t)'); %afisam spectrul
 
 
-%am luat D care este durata semnalelor in functie de numarul de ordine
-%si semnal triunghiular
+%am luat D=9 care este durata semnalelor in functie de numarul de ordine
+%al echipei
+%si semnal dreptunghiular
 %conform SF (SFT, SFA si SFC) orice
 %semnal periodic poate fi aproximat printr-o suma infinita de sinusuri
 %si cosinusuri de diferite frecvente 
